@@ -1,0 +1,10 @@
+name: Bblocks-Essentials
+version: ${project.version}
+main: me.ronsane.bblocksessentials.BblocksEssentials
+api-version: 1.16
+authors: [ ronsane ]
+description: Bblocks-Essentials
+
+commands:
+  playtime:
+  bblocks-essentials:
