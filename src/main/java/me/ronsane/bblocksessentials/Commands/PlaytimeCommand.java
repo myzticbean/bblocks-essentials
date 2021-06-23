@@ -28,7 +28,8 @@ public class PlaytimeCommand implements CommandExecutor {
                 else if(args.length == 1) {
                     if(player.hasPermission("playtime.others")) {
                         try {
-                            OfflinePlayer offPlayer = Bukkit.getOfflinePlayer(Bukkit.getPlayerUniqueId(args[0]));
+                            Player offlinePlayer = Bukkit.getPlayer(args[0]);
+                            OfflinePlayer offPlayer = Bukkit.getOfflinePlayer(offlinePlayer.getUniqueId());
                             if(offPlayer != null) {
                                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l» &6&l" + args[0] + "'s playtime: &e" + PlaytimeHandler.getFormattedPlaytimeForOfflinePlayer(offPlayer)));
                             }

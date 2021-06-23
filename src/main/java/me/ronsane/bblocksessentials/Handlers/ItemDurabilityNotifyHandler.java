@@ -1,6 +1,7 @@
 package me.ronsane.bblocksessentials.Handlers;
 
 
+import me.ronsane.bblocksessentials.CommonUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 
@@ -9,10 +10,14 @@ public class ItemDurabilityNotifyHandler {
 
         if(!event.getItem().getItemMeta().isUnbreakable()) {
             if((event.getItem().getType().getMaxDurability() - event.getItem().getDurability() - 1) < 21) {
-                event.getPlayer().sendActionBar(ChatColor.translateAlternateColorCodes('&',
+                CommonUtils.sendActionBarToPlayer(event.getPlayer(),
                         "&c&lINFO: &7Your item &e" + event.getItem().getType().toString().replaceAll("_", " ")
-                                + " &7will break soon (" + (event.getItem().getType().getMaxDurability() - event.getItem().getDurability() - 1)
-                                + "/" + event.getItem().getType().getMaxDurability() + ")"));
+                        + " &7will break soon (" + (event.getItem().getType().getMaxDurability() - event.getItem().getDurability() - 1)
+                        + "/" + event.getItem().getType().getMaxDurability() + ")");
+//                event.getPlayer().sendActionBar(ChatColor.translateAlternateColorCodes('&',
+//                        "&c&lINFO: &7Your item &e" + event.getItem().getType().toString().replaceAll("_", " ")
+//                                + " &7will break soon (" + (event.getItem().getType().getMaxDurability() - event.getItem().getDurability() - 1)
+//                                + "/" + event.getItem().getType().getMaxDurability() + ")"));
             }
         }
 

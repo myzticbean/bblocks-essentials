@@ -1,6 +1,5 @@
 package me.ronsane.bblocksessentials.Handlers;
 
-import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
@@ -12,9 +11,9 @@ public class PlaytimeHandler {
     public static String hour = "h";
     public static String day = "d";
 
-    private static String format(String format) {
-        return ChatColor.translateAlternateColorCodes('&', format);
-    }
+//    private static String format(String format) {
+//        return ChatColor.translateAlternateColorCodes('&', format);
+//    }
     private static  String getTime(int seconds) {
         if (seconds < 60) {
             return seconds + second;
